@@ -22,15 +22,15 @@ class Autoencoder(nn.Module):
     def __init__(self, input_dim, encoding_dim):
         super().__init__()
         self.encoder = nn.Sequential(
-            nn.Linear(input_dim, 128),
+            nn.Linear(input_dim, 64),
             nn.ReLU(),
-            nn.Linear(128, encoding_dim),
+            nn.Linear(64, encoding_dim),
             nn.ReLU(),
         )
         self.decoder = nn.Sequential(
-            nn.Linear(encoding_dim, 128),
+            nn.Linear(encoding_dim, 64),
             nn.ReLU(),
-            nn.Linear(128, input_dim),
+            nn.Linear(64, input_dim),
         )
 
     def forward(self, x):
