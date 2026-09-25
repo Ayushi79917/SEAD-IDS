@@ -19,7 +19,7 @@ from importlib import import_module
 Autoencoder = import_module("02_feature_extract").Autoencoder
 
 RESULTS = "results"
-ENCODING_DIM = 32
+ENCODING_DIM = 64
 
 st.set_page_config(page_title="SEAD-IDS Live Dashboard", layout="wide")
 st.title("🛡️ SEAD-IDS — Live Intrusion Detection Dashboard")
